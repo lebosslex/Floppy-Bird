@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
     }
 
     // Background
-    SDL_Surface* bgSurface = SDL_LoadBMP("/home/alex/Documents/MyVideoGame/MyFirtsGames/Sky1.bmp");
+    SDL_Surface* bgSurface = SDL_LoadBMP("/home/alex/Documents/MyVideoGame/MyFirtsGames/img/Sky1.bmp");
     if (!bgSurface) {
         std::cerr << "Erreur chargement background : " << SDL_GetError() << std::endl;
         SDL_DestroyRenderer(renderer);
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 
     // Sprite
 
-    SDL_Surface* spriteSurface = SDL_LoadBMP("/home/alex/Documents/MyVideoGame/MyFirtsGames/Sprite1.bmp");
+    SDL_Surface* spriteSurface = SDL_LoadBMP("/home/alex/Documents/MyVideoGame/MyFirtsGames/img/Sprite1.bmp");
     if (!spriteSurface) {
         std::cerr << "Erreur chargement sprite : " << SDL_GetError() << std::endl;
         SDL_DestroyTexture(bgTexture);
@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
 
     // texte
 
-    TTF_Font* font = TTF_OpenFont("/home/alex/Téléchargements/Arial.ttf", 48);
+    TTF_Font* font = TTF_OpenFont("/home/alex/Documents/MyVideoGame/MyFirtsGames/Police/Arial.ttf", 48);
     if(!font) {
         std::cerr << "Erreur chargement police : " << TTF_GetError() << std::endl;
         SDL_DestroyTexture(spriteTexture);
